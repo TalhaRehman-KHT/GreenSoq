@@ -16,7 +16,7 @@ const app = express();
 
 // ✅ Middleware setup
 app.use(cors({
-    origin: "http://localhost:5173", // your frontend URL
+    origin: "https://green-soq.vercel.app",
     credentials: true,
 }));
 app.use(express.json());
