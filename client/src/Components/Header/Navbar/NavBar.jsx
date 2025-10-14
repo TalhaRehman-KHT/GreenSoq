@@ -76,16 +76,15 @@ export default function NavBar() {
                     </button>
 
                     {/* ✅ User Section */}
+                    {/* ✅ User Section */}
                     <div className="flex items-center gap-1">
                         <User
                             onClick={() => {
                                 if (user) {
-                                    // if user logged in → logout
-                                    logout(); // your AuthContext logout now also redirects to /login
+                                    logout();
+                                    navigate("/login"); // Redirect after logout
                                 } else {
-                                    // if not logged in → go to login page
-                                    // window.location.href = "/login";
-                                    navigate('/login')
+                                    navigate("/login"); // Redirect to login if not logged in
                                 }
                             }}
                             className="w-6 h-6 cursor-pointer hover:text-gray-700"
@@ -97,7 +96,8 @@ export default function NavBar() {
                                 </span>
                                 <button
                                     onClick={() => {
-                                        logout(); // ✅ this will also redirect to /login
+                                        logout();
+                                        navigate("/login"); // Redirect after logout
                                     }}
                                     className="text-sm text-black hover:text-gray-700"
                                 >
@@ -110,6 +110,7 @@ export default function NavBar() {
                             </Link>
                         )}
                     </div>
+
 
                     <Handbag className="w-7 h-7 cursor-pointer" />
                 </div>
