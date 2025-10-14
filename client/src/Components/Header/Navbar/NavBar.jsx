@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext.jsx";
 import {
     User,
@@ -13,6 +13,7 @@ import {
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const navigate = useNavigate();
 
     // ✅ FIX: Get user and logout from AuthContext
     const { user, logout } = useAuth();
@@ -83,7 +84,8 @@ export default function NavBar() {
                                     logout(); // your AuthContext logout now also redirects to /login
                                 } else {
                                     // if not logged in → go to login page
-                                    window.location.href = "/login";
+                                    // window.location.href = "/login";
+                                    navigate('/login')
                                 }
                             }}
                             className="w-6 h-6 cursor-pointer hover:text-gray-700"
