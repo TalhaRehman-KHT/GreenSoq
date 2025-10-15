@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext.jsx";
-import { User, ChevronDown, Search, Handbag, Menu, X } from "lucide-react";
+import { User, ChevronDown, Search, Handbag, Menu, X, MessageSquare } from "lucide-react";
 
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -77,7 +77,10 @@ export default function NavBar() {
                     : "max-h-20 opacity-100"
                     }`}
             >
-                <div className="flex gap-5 justify-center">
+                <div className="flex gap-2 justify-center">
+                    <div className="w-5 h-1">
+                        <MessageSquare className="w-6 h-6 cursor-pointer" />
+                    </div>
                     <p className="font-semibold text-black">+92 58 512 105</p>
                     <p className="text-gray-700">info@gmail.com</p>
                 </div>
