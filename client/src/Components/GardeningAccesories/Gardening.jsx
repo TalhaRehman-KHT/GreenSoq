@@ -26,7 +26,7 @@ export default function Gardening() {
                 sm:grid-cols-2 
                 md:grid-cols-3 
                 lg:grid-cols-4 
-                gap-6 
+                gap-2 
                 justify-items-center
             ">
                 {accessories.map((item, i) => (

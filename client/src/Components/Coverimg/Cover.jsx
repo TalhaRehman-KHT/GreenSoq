@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Cover() {
     return (
-        <div className="w-full">
+        <div className="w-full mt-30">
             {/* 🌿 Large Screen Image */}
             <img
                 src="/assets/coverimg.png"
