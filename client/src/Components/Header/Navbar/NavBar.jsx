@@ -92,6 +92,7 @@ export default function NavBar() {
                         type="text"
                         placeholder="Search for plants..."
                         className="w-full bg-white px-4 py-2 rounded outline-none text-sm"
+
                     />
                 </div>
             )}
