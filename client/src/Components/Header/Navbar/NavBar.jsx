@@ -77,8 +77,10 @@ export default function NavBar() {
                     : "max-h-20 opacity-100"
                     }`}
             >
-                <p className="font-semibold text-black">+92 58 512 105</p>
-                <p className="text-gray-700">info@gmail.com</p>
+                <div className="flex gap-5 justify-center">
+                    <p className="font-semibold text-black">+92 58 512 105</p>
+                    <p className="text-gray-700">info@gmail.com</p>
+                </div>
             </div>
 
             {showSearch && (
